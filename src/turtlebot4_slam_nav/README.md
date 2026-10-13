@@ -255,7 +255,7 @@ Sau khi lưu thành công, thoát teleop ở B và dừng mapping ở A bằng `
 source ~/tb4_ws/src/turtlebot4_slam_nav/scripts/env.sh
 ros2 launch turtlebot4_slam_nav localization.launch.py \
   world:=depot gui_render_engine:=ogre2 \
-  map:="$HOME/tb4_ws/src/turtlebot4_slam_nav/maps/map.yaml"
+  map:="$HOME/tb4_ws/src/turtlebot4_slam_nav/maps/depot_02.yaml"
 ```
 
 Giữ A mở. Launch này bật map server + AMCL, tắt SLAM và chưa chạy Nav2.
@@ -291,7 +291,7 @@ Dừng `tf2_echo` bằng `Ctrl+C`. Dừng localization ở A trước khi chuy�
 source ~/tb4_ws/src/turtlebot4_slam_nav/scripts/env.sh
 ros2 launch turtlebot4_slam_nav navigation.launch.py \
   world:=depot gui_render_engine:=ogre2 \
-  map:="$HOME/tb4_ws/src/turtlebot4_slam_nav/maps/map.yaml"
+  map:="$HOME/tb4_ws/src/turtlebot4_slam_nav/maps/depot_02.yaml"
 ```
 
 Giữ A mở. Launch này bật map server + AMCL + Nav2; tắt SLAM.
